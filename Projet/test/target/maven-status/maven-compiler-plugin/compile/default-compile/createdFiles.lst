@@ -1,0 +1,9 @@
+isen\projet\db\daos\PersonDao.class
+isen\projet\view\HomeController.class
+isen\projet\Launcher.class
+isen\projet\db\entities\Person.class
+isen\projet\db\entities\PersonService.class
+isen\projet\db\daos\DataSourceFactory.class
+isen\projet\App.class
+isen\projet\view\ListContactController.class
+isen\projet\view\AddContactController.class

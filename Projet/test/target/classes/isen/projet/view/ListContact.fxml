@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isen.projet.view.ListContactController">
+   <children>
+      <TableView layoutX="9.0" layoutY="37.0" prefHeight="200.0" prefWidth="983.0">
+        <columns>
+          <TableColumn prefWidth="96.0" text="First Name" />
+            <TableColumn prefWidth="90.6666488647461" text="Last Name" />
+            <TableColumn prefWidth="89.33335876464844" text="Nick Name" />
+            <TableColumn prefWidth="103.3333740234375" text="Phone Number" />
+            <TableColumn prefWidth="269.3332214355469" text="Address" />
+            <TableColumn prefWidth="204.66668701171875" text="Email Address" />
+            <TableColumn prefWidth="129.33331298828125" text="Birth Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="55.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleButtonAdd" text="Add Contact" />
+      <Button layoutX="166.0" layoutY="300.0" mnemonicParsing="false" text="Delete Contact" />
+      <Button layoutX="300.0" layoutY="300.0" mnemonicParsing="false" text="Update Contact" />
+   </children>
+</AnchorPane>
