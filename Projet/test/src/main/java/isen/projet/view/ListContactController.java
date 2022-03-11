@@ -1,6 +1,7 @@
 package isen.projet.view;
 
 import java.io.File;
+import java.io.Writer;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -102,18 +103,7 @@ public class ListContactController {
 	      }
 	      //allData.addAll(dataRow);
 	    }
-	
-	private void backup() { // enregistrer une bdd au format vcard
-		/*File file = new File("my-vcard.vcf");
-		VCard vcard = Ezvcard.parse(file).first();
-		System.out.println("Name: " + vcard.getFormattedName().getValue());
-		System.out.println("Email: " + vcard.getEmails().get(0).getValue());*/
-	}
-	
-	private void export() {
 		
-	}
-	
 	@FXML
 	public void handleButtonAdd() throws Exception{
 		App.setRoot("/isen/projet/view/AddContact");

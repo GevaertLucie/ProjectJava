@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Last Name 2;First name 2
+FN:Last Name 2 First name 2
+NICKNAME:Nick Name 2
+TEL;HOME;VOICE:0602020202
+ADR;HOME:;;address 2
+EMAIL:email 2
+BDAY:2002-02-20
+END:VCARD

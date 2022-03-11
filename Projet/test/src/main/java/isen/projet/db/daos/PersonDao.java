@@ -1,5 +1,11 @@
 package isen.projet.db.daos;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -106,11 +112,11 @@ public class PersonDao {
 		return person;
 	}
 	
-	public void deletePerson(Person person) {
+	public void deletePerson(int id) {//Person person
 		try (Connection connection = getDataSource().getConnection()) {
 			String sqlQuery = "DELETE FROM person WHERE idperson=?";
 			try (PreparedStatement statement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
-				statement.setInt(1, person.getIdPerson());
+				statement.setInt(1, id);//person.getIdPerson()
 				statement.executeUpdate();
 				
 				statement.close();
@@ -119,6 +125,44 @@ public class PersonDao {
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
+		}
+	}
+	
+	public void export() {
+		List<Person> listPerson = listPersons();
+		for(Person p : listPerson) {
+			try {
+	            File f = new File(p.getFirstName()+".vcf");
+	            if(!f.exists()) {
+		            if (f.createNewFile()) {
+		                System.out.println(f.getName() + " File created");
+		            }
+		            else {
+		            	System.err.println("Création du fichier échoué");
+		            }
+	            }
+
+	            try {
+					FileWriter writer = new FileWriter(f);
+					writer.write("BEGIN:VCARD\n");
+					writer.write("VERSION:3.0\n");
+					writer.write("N:"+p.getLastName()+";"+p.getFirstName()+"\n");
+					writer.write("FN:"+p.getLastName()+" "+p.getFirstName()+"\n");
+					writer.write("NICKNAME:"+p.getNickName()+"\n");
+					writer.write("TEL;HOME;VOICE:"+p.getPhoneNumber()+"\n");
+					writer.write("ADR;HOME:;;"+p.getAdress()+"\n");
+					writer.write("EMAIL:"+p.getEmailAdress()+"\n");
+					writer.write("BDAY:"+p.getBirthDate()+"\n");
+					writer.write("END:VCARD");
+					writer.close();
+				}
+		 	    catch (IOException e) {
+			      System.err.println("Erreur d'exportation !"+ p.getFirstName());
+			    }
+	        }
+	        catch (Exception e) {
+	            System.err.println(e);
+	        }
 		}
 	}
 }
