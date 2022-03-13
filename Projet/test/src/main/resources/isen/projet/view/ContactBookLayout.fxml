@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" stylesheets="@ContactBook.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox style="-fx-background-color: transparent;" styleClass="top-border" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Label alignment="TOP_LEFT" stylesheets="@ContactBook.css" text="My Contact Book">
+               <font>
+                  <Font name="Corbel" size="32.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>

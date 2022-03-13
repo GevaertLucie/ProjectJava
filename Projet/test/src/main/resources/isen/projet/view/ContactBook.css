@@ -1,0 +1,60 @@
+.root{
+    -fx-background-color:
+            radial-gradient(radius 90%, #EAEAEA, #FFFFFF);
+
+}
+
+.top-border Label {
+	-fx-text-fill: #C5C3C6;
+	-fx-font-size: 30pt
+}
+
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #4D505911, #F6F6F611);
+    -fx-background-radius: 6px 8px 0px 0px;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-size: 10pt;
+    -fx-text-fill: #4D5059;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 2 0 2 10px;
+}
+.table-row-cell:odd{
+    -fx-background-color: #4D505911;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #EAEAEA11;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:hover {
+    -fx-background-color: #C2C2C2;
+    -fx-text-background-color: white;
+}
+.table-row-cell:focused {
+	-fx-background-color: #4c5c68;
+	-fx-background-radius: 5px;
+}
+
+.info-section Label {
+	-fx-text-fill: #4D5059;
+}

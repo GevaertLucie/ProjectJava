@@ -10,6 +10,7 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -123,5 +124,10 @@ public class PersonTestDao {
 		//THEN
 		assertThat(persons).hasSize(2);
 		assertThat(persons).extracting("idPerson", "lastName").containsOnly(tuple(2, "Last Name 2"), tuple(3, "Last Name 3"));
+	}
+	
+	@After
+	public void exportDB() throws Exception{
+		personDao.export(personDao.listPersons());
 	}
 }

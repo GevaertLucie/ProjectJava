@@ -11,11 +11,7 @@ public class Person {
 	private String adress;
 	private String emailAdress;
 	private Date birthDate;
-	
-	public Person() {
-		
-	}
-	
+
 	public Person(int idPerson, String lastName, String firstName, String nickName, String phoneNumber, String adress, String email, Date birthDay) {
 		this.idPerson = idPerson;
 		this.lastName = lastName;
