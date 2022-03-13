@@ -3,7 +3,7 @@
 This java project was developped by the team : Lucie GEVAERT , Nirina ANDRIANALIZAH, Hanaa HAMMAL.
 
 ## 1-Introduction 
-This contact application is developed using Java. One of its main functionnalities is allowing the user to list all contacts that exist in the database as well as adding a new person to the list , updating data of existing contacts and even deleting a contact.
+This contact application is developed using Java. One of its main functionnalities is allowing the user to list all contacts that exist in the database as well as adding a new person to the list, updating data of existing contacts and even deleting a contact.
 
 
 ## 2-Organisation of the team
