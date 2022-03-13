@@ -118,16 +118,16 @@ public class PersonTestDao {
 		Date date = new Date(format.parse("2001-01-10 11:00:00.000").getTime());
 		Person person = new Person(1,"Last Name 1", "First Name 1", "Nick Name 1", "0601010101", "address 1", "email 1", date);
 
-		personDao.deletePerson(1);
+		personDao.deletePerson(person);
 		List<Person> persons = personDao.listPersons();
 		
 		//THEN
 		assertThat(persons).hasSize(2);
-		assertThat(persons).extracting("idPerson", "lastName").doesNotContain(tuple(1, "Last Name 1"));//.containsOnly(tuple(2, "Last Name 2"), tuple(3, "Last Name 3")
+		assertThat(persons).extracting("idPerson", "lastName").containsOnly(tuple(2, "Last Name 2"), tuple(3, "Last Name 3"));
 	}
 	
 	@After
 	public void exportDB() throws Exception{
-		personDao.export();
+		personDao.export(personDao.listPersons());
 	}
 }

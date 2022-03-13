@@ -1,9 +1,11 @@
 isen\projet\db\daos\PersonDao.class
-isen\projet\view\HomeController.class
 isen\projet\Launcher.class
 isen\projet\db\entities\Person.class
 isen\projet\db\entities\PersonService.class
+isen\projet\view\HomeScreenController$1.class
+isen\projet\view\EditContactController.class
 isen\projet\db\daos\DataSourceFactory.class
+isen\projet\view\HomeScreenController.class
 isen\projet\App.class
-isen\projet\view\ListContactController.class
+isen\projet\db\entities\PersonService$PersonServiceHolder.class
 isen\projet\view\AddContactController.class
